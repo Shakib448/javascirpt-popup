@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Creative popup effect</title>
+</head>
+
+<body>
+    <div class="main ">
+        <h1>POPUP EFFECT - TRULY AMAZING</h1>
+        <P>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Id qui odit recusandae assumenda nihil, soluta
+            quaerat omnis reprehenderit sed, hic est animi! Corporis inventore, voluptatum dolor mollitia veritatis
+            unde. Aperiam consectetur iusto soluta pariatur voluptate. Commodi inventore est minus laudantium itaque
+            quis, ab eligendi? Quisquam officia delectus commodi maxime similique!
+        </P>
+        <a href="#" class="btn popup-btn">Click me</a>
+    </div>
+
+    <div class="popup-wrap ">
+        <div class="popup-box">
+            <h3>I will appreciate if you make one share jus</h3>
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-linkedin"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-whatsapp"></i>
+            <a href="#" class="close-btn popup-close" >x</a>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $('.popup-btn').click(function(e){
+                $('.popup-wrap').fadeIn(500);
+                $('.popup-box').removeClass('transform-out').addClass('transform-in');
+                e.preventDefault();
+            });
+            $('.popup-close').click(function(e){
+                $('.popup-wrap').fadeOut(500);
+                $('.popup-box').removeClass('transform-in').addClass('transform-out');
+                e.preventDefault();
+            });
+        });
+    </script>
+</body>
+
+</html>
